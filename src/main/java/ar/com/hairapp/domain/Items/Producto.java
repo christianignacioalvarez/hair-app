@@ -10,10 +10,6 @@ public class Producto extends ItemCatalogo {
 	private int codigoDeProducto;  ///
 	private String especificaciones; //ver si unificarlo con observacionesde servicio
 
-	@Override
-	public double getPrecio() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 
 }

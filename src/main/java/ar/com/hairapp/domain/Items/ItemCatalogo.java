@@ -5,5 +5,7 @@ public abstract class ItemCatalogo extends Entidad {
 
 	private double precio;
 	
-	public abstract double getPrecio();
+	public double getPrecio() {
+		return this.precio;
+	};
 }

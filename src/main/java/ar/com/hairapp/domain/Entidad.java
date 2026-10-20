@@ -1,5 +1,5 @@
 package ar.com.hairapp.domain;
 
-public class Entidad {
+public abstract class Entidad {
 	private Integer id;
 }
