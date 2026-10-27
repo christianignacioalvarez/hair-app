@@ -4,13 +4,17 @@ import java.time.LocalDateTime;
 
 import ar.com.hairapp.enums.Estado;
 
-public class Admin extends Entidad{
+public class Usuario extends Entidad{
 	private String email;
 	private String userName;
 	private String nombre;
 	
 	
-	public Admin(String email, String userName, String nombre) {
+	public Usuario() {
+		
+	}
+	
+	public Usuario(String email, String userName, String nombre) {
 		super();
 		this.email = email;
 		this.userName = userName;

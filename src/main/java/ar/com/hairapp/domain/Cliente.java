@@ -3,7 +3,7 @@ package ar.com.hairapp.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente extends Entidad{
+public class Cliente extends Usuario{
 	private String nombre;
 	private String apellido;
 	private String apodo;
@@ -15,7 +15,7 @@ public class Cliente extends Entidad{
 	}
 
 	public Cliente(String nombre, String apellido, String apodo, int telefono) {
-		super();
+		super(apodo, apodo, apodo);
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.apodo = apodo;
