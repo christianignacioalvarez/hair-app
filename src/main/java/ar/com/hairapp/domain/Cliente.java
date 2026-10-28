@@ -23,6 +23,7 @@ public class Cliente extends Usuario{
 		this.turnos = new ArrayList<Turno>();
 	}
 	
+	//TODO: Metodo que refiere a un recordatorio de turno tanto a un usuario peluquero, como cliente.
 	public void recordarTurno() {
 		
 	}
