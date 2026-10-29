@@ -1,7 +1,7 @@
 create table USUARIOS(
 	ID INTEGER not null AUTO_INCREMENT,
 	EMAIL varchar(255) not null,
-	CONTRASEÑA varchar(255) not null,
+	PASSWORD varchar(255) not null,
 	USERNAME varchar(50) not null,
 	NOMBRE varchar(100),
 	APELLIDO varchar(100),
@@ -10,11 +10,8 @@ create table USUARIOS(
 
 create table CLIENTES( 
 	ID INTEGER not null,
-	EMAIL varchar(255) not null,
-	CONTRASEÑA varchar(255) not null,
-	USERNAME varchar(50) not null,
-	NOMBRE varchar(100),
-	APELLIDO varchar(100),
+	APODO varchar(50),
+	TELEFONO INTEGER not null,
 	PRIMARY KEY(ID)
 );
 
@@ -33,7 +30,7 @@ alter table TURNOS add constraint TURN$CLI foreign key (CLIENTE_ID) references C
 
 create table ITEMSTURNO(
 	ID INTEGER not null AUTO_INCREMENT,
-	CANTIDAD INTEGER not null,
+	CANTIDAD INT not null,
 	TURNO_ID INTEGER not null,
 	PRIMARY KEY(ID)
 );
@@ -52,7 +49,7 @@ alter table ITEMSCATALOGO add constraint ICATA$ITURN  foreign key (ITEMTURNO_ID)
 create table SERVICIOS(
 	ID INTEGER not null,
 	TIPO varchar(255) not null,
-	OBSERVACIONES varchar(255),
+	ANOTACIONES varchar(255),
 	PRIMARY KEY(ID)
 );
 
@@ -65,7 +62,7 @@ create table PRODUCTOS(
 	VENCIMIENTO DATE not null,
 	TONO DOUBLE,
 	VOLUMEN DOUBLE,
-	ESPECIFICACIONES varchar(255),
+	DETALLE varchar(255),
 	SERVICIO_ID INTEGER;
 	PRIMARY KEY(ID)
 );

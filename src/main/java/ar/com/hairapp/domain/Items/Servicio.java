@@ -6,15 +6,15 @@ import java.util.List;
 public class Servicio extends ItemCatalogo {
 	
 	private String tipo;
-	private String observacion;
+	private String anotacion;
 	private List<Producto>productos;
 
 
-	public Servicio(String tipo, String observacion) {
-		super();
+	public Servicio(Integer id, double precio, String tipo, String anotacion, List<Producto> productos) {
+		super(id, precio);
 		this.tipo = tipo;
-		this.observacion = observacion;//Pensarlo como comentario/anotaciones
-		this.productos = new ArrayList<Producto>();
+		this.anotacion = anotacion;
+		this.productos = productos;
 	}
 
 

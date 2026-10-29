@@ -3,13 +3,26 @@ package ar.com.hairapp.domain.Items;
 import java.util.Date;
 
 public class Producto extends ItemCatalogo {
-	
 	private String marca;
 	private String nombre;
 	private Date vencimiento; 
-	private int codigoDeProducto;  ///
-	private String especificaciones; //ver si unificarlo con observacionesde servicio
+	private double tono;
+	private double volumen;
+	private String detalle;
+	
+	
+	public Producto(Integer id, double precio, String marca, String nombre, Date vencimiento, double tono,
+			double volumen, String detalle) {
+		super(id, precio);
+		this.marca = marca;
+		this.nombre = nombre;
+		this.vencimiento = vencimiento;
+		this.tono = tono;
+		this.volumen = volumen;
+		this.detalle = detalle;
+	} 
 
 	
-
+	
+	
 }

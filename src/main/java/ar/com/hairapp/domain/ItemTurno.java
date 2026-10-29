@@ -7,8 +7,8 @@ public class ItemTurno extends Entidad{
 	private int cantidad;
 	private ItemCatalogo itemCatalogo;
 	
-	public ItemTurno(int cantidad, ItemCatalogo itemCatalogo) {
-		super();
+	public ItemTurno(Integer id, int cantidad, ItemCatalogo itemCatalogo) {
+		super(id);
 		this.cantidad = cantidad;
 		this.itemCatalogo = itemCatalogo;
 	}

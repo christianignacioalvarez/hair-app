@@ -13,14 +13,14 @@ public class Turno extends Entidad{
 	private Cliente cliente;
 	private List<ItemTurno>itemsTurno; 
 	
-	public Turno(LocalDateTime fecha_atencion, String detalle) {
-		super();
+	public Turno(Integer id, LocalDateTime fecha_atencion, String detalle) {
+		super(id);
 		this.fecha_atencion = fecha_atencion;
 		this.detalle = detalle;
 	}
 	
-	public Turno(LocalDateTime fecha_atencion, String detalle, Estado estadoPago) {
-		super();
+	public Turno(Integer id, LocalDateTime fecha_atencion, String detalle, Estado estadoPago) {
+		super(id);
 		this.fecha_atencion = fecha_atencion;
 		this.detalle = detalle;
 		this.estadoPago = estadoPago;
