@@ -12,8 +12,8 @@ public class Usuario extends Entidad{
 	private String apellido;
 	
 	
-	public Usuario(Integer id, String email, String password, String userName, String nombre, String apellido) {
-		super(id);
+	public Usuario(String email, String password, String userName, String nombre, String apellido) {
+		super();
 		this.email = email;
 		this.password = password;
 		this.userName = userName;

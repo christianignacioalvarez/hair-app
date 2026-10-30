@@ -11,9 +11,9 @@ public class Producto extends ItemCatalogo {
 	private String detalle;
 	
 	
-	public Producto(Integer id, double precio, String marca, String nombre, Date vencimiento, double tono,
+	public Producto(double precio, String marca, String nombre, Date vencimiento, double tono,
 			double volumen, String detalle) {
-		super(id, precio);
+		super(precio);
 		this.marca = marca;
 		this.nombre = nombre;
 		this.vencimiento = vencimiento;

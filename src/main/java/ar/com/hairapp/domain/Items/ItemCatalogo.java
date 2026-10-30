@@ -5,8 +5,8 @@ public abstract class ItemCatalogo extends Entidad {
 	private double precio;
 	
 	
-	public ItemCatalogo(Integer id, double precio) {
-		super(id);
+	public ItemCatalogo(double precio) {
+		super();
 		this.precio = precio;
 	}
 	
