@@ -3,9 +3,20 @@ package ar.com.hairapp.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "CLIENTES")
 public class Cliente extends Usuario{
+	@Column(name = "APODO")
 	private String apodo;
+	
+	@Column(name = "TELEFONO")
 	private int telefono;
+	
+	@Column(name = "#") //TODO: Completar relacion 
 	private List<Turno>turnos;
 	
 

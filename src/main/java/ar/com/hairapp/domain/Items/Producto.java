@@ -2,12 +2,30 @@ package ar.com.hairapp.domain.Items;
 
 import java.util.Date;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "PRODUCTOS")
 public class Producto extends ItemCatalogo {
+	
+	@Column(name = "MARCA")
 	private String marca;
+	
+	@Column(name = "NOMBRE")
 	private String nombre;
-	private Date vencimiento; 
+	
+	@Column(name = "VENCIMIENTO")
+	private Date vencimiento;
+	
+	@Column(name = "TONO")
 	private double tono;
+	
+	@Column(name = "VOLUMEN")
 	private double volumen;
+	
+	@Column(name = "DETALLE")
 	private String detalle;
 	
 	

@@ -1,14 +1,27 @@
 package ar.com.hairapp.domain;
 
 import java.time.LocalDateTime;
-
 import ar.com.hairapp.enums.Estado;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "USUARIOS")
 public class Usuario extends Entidad{
+	@Column(name = "EMAIL")
 	private String email;
+	
+	@Column(name = "PASSWORD")
 	private String password;
+	
+	@Column(name = "USERNAME")
 	private String userName;
+	
+	@Column(name = "NOMBRE")
 	private String nombre;
+	
+	@Column(name = "APELLIDO")
 	private String apellido;
 	
 	

@@ -1,12 +1,22 @@
 package ar.com.hairapp.domain.Items;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "SERVICIOS")
 public class Servicio extends ItemCatalogo {
 	
+	@Column(name = "TIPO")
 	private String tipo;
+	
+	@Column(name = "ANOTACIONES")
 	private String anotacion;
+	
+	@Column(name = "") //TODO:Completar relacion
 	private List<Producto>productos;
 
 
