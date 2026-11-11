@@ -15,8 +15,8 @@ public class ItemTurno extends Entidad{
 	@Column(name = "CANTIDAD")
 	private int cantidad;
 	
-	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "") //TODO: completar relacion
+	@OneToOne() 
+	@JoinColumn(name = "ITEMCATALOGO_ID", nullable = false) 
 	private ItemCatalogo itemCatalogo;
 	
 	public ItemTurno(int cantidad, ItemCatalogo itemCatalogo) {

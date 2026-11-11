@@ -5,8 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ar.com.hairapp.enums.Estado;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -19,13 +24,14 @@ public class Turno extends Entidad{
 	@Column(name = "DETALLE")
 	private String detalle;
 	
-	@Column(name = "ESTADO") //TODO:completar relacion con enum
+	@Column(name = "ESTADO")
+	@Enumerated(EnumType.STRING)
 	private Estado estadoPago;
-	
-	@Column(name = "") //TODO:completar relacion
+	 
 	private Cliente cliente;
 	
-	@Column(name = "") //TODO:completar relacion
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "TURNO_ID", referencedColumnName = "ID", nullable = false)
 	private List<ItemTurno>itemsTurno; 
 	
 	public Turno(LocalDateTime fecha_atencion, String detalle) {

@@ -4,6 +4,8 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,7 +18,8 @@ public class Servicio extends ItemCatalogo {
 	@Column(name = "ANOTACIONES")
 	private String anotacion;
 	
-	@Column(name = "") //TODO:Completar relacion
+	@OneToMany()
+	@JoinColumn(name = "SERVICIO_ID", referencedColumnName = "ID", nullable = true)
 	private List<Producto>productos;
 
 

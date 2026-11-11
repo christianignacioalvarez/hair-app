@@ -20,10 +20,10 @@ public class Producto extends ItemCatalogo {
 	private Date vencimiento;
 	
 	@Column(name = "TONO")
-	private double tono;
+	private Double tono;
 	
 	@Column(name = "VOLUMEN")
-	private double volumen;
+	private Double volumen;
 	
 	@Column(name = "DETALLE")
 	private String detalle;
