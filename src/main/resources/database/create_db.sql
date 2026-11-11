@@ -28,23 +28,22 @@ create table TURNOS(
 
 alter table TURNOS add constraint TURN$CLI foreign key (CLIENTE_ID) references CLIENTES(ID);
 
+create table ITEMSCATALOGO(
+	ID INTEGER not null AUTO_INCREMENT,
+	PRECIO DOUBLE not null,
+	PRIMARY KEY(ID)
+);
+
 create table ITEMSTURNO(
 	ID INTEGER not null AUTO_INCREMENT,
 	CANTIDAD INT not null,
 	TURNO_ID INTEGER not null,
+	ITEMCATALOGO_ID INTEGER NOT NULL,
 	PRIMARY KEY(ID)
 );
 
 alter table ITEMSTURNO add constraint ITURN$TURN foreign key (TURNO_ID) references TURNOS(ID);
-
-create table ITEMSCATALOGO(
-	ID INTEGER not null AUTO_INCREMENT,
-	PRECIO DOUBLE not null,
-	ITEMTURNO_ID INTEGER not null,
-	PRIMARY KEY(ID)
-);
-
-alter table ITEMSCATALOGO add constraint ICATA$ITURN  foreign key (ITEMTURNO_ID) references ITEMSTURNO(ID);
+alter table ITEMSTURNO add constraint ITURN$ICATA foreign key (ITEMCATALOGO_ID) references ITEMSCATALOGO(ID);
 
 create table SERVICIOS(
 	ID INTEGER not null,
