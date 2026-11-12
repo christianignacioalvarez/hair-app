@@ -14,6 +14,10 @@ public abstract class ItemCatalogo extends Entidad {
 	@Column(name = "PRECIO")
 	private double precio;
 	
+	//Solo para Hibernate
+	ItemCatalogo(){
+		
+	}
 	
 	public ItemCatalogo(double precio) {
 		super();

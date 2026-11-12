@@ -34,6 +34,11 @@ public class Turno extends Entidad{
 	@JoinColumn(name = "TURNO_ID", referencedColumnName = "ID", nullable = false)
 	private List<ItemTurno>itemsTurno; 
 	
+	//Solo para Hibernate
+	Turno(){
+		
+	}
+	
 	public Turno(LocalDateTime fecha_atencion, String detalle) {
 		super();
 		this.fecha_atencion = fecha_atencion;

@@ -19,6 +19,11 @@ public class ItemTurno extends Entidad{
 	@JoinColumn(name = "ITEMCATALOGO_ID", nullable = false) 
 	private ItemCatalogo itemCatalogo;
 	
+	//Solo para Hibernate
+	ItemTurno(){
+		
+	}
+	
 	public ItemTurno(int cantidad, ItemCatalogo itemCatalogo) {
 		super();
 		this.cantidad = cantidad;

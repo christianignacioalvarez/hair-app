@@ -28,6 +28,10 @@ public class Producto extends ItemCatalogo {
 	@Column(name = "DETALLE")
 	private String detalle;
 	
+	//Solo para Hibernate
+	Producto(){
+		
+	}
 	
 	public Producto(double precio, String marca, String nombre, Date vencimiento, double tono,
 			double volumen, String detalle) {

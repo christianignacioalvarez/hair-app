@@ -23,7 +23,11 @@ public class Cliente extends Usuario{
 	@JoinColumn(name = "CLIENTE_ID", referencedColumnName = "ID", nullable = true)
 	private List<Turno>turnos;
 	
-
+	//Solo para Hibernate
+	Cliente(){
+		
+	}
+	
 	public Cliente(String email, String password, String userName, String nombre, String apellido, String apodo, int telefono, List<Turno> turnos) {
 		super(email, password, userName, nombre, apellido);
 		this.apodo = apodo;

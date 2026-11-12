@@ -22,6 +22,10 @@ public class Servicio extends ItemCatalogo {
 	@JoinColumn(name = "SERVICIO_ID", referencedColumnName = "ID", nullable = true)
 	private List<Producto>productos;
 
+	//Solo para Hibernate
+	Servicio(){
+		
+	}
 
 	public Servicio(double precio, String tipo, String anotacion, List<Producto> productos) {
 		super(precio);

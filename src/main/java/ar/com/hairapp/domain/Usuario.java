@@ -27,6 +27,10 @@ public class Usuario extends Entidad{
 	@Column(name = "APELLIDO")
 	private String apellido;
 	
+	//Solo para Hibernate
+	Usuario(){
+		
+	}
 	
 	public Usuario(String email, String password, String userName, String nombre, String apellido) {
 		super();
