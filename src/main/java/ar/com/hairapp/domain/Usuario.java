@@ -57,4 +57,46 @@ public class Usuario extends Entidad{
 	public void registrarTurno(Cliente cliente, LocalDateTime horarioDia, String detalle, Estado estadoPago) {
 		
 	}
+
+	private void setEmail(String email) {
+		this.email = email;
+	}
+
+	private void setPassword(String password) {
+		this.password = password;
+	}
+
+	private void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	private void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	private void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+	
+	
 }
